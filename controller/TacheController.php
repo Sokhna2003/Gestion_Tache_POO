@@ -48,14 +48,14 @@ class TacheController {
             }
         }
         
-        loadView("taches/ajout", ["errors" => $errors]);
+        loadView("tache/ajout", ["errors" => $errors]);
     }
 
     public function detail() {
         $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
         $tache = $this->tacheRepository->findById($id);
         if (empty($tache)) { die("Tâche introuvable"); }
-        loadView("taches/detail", ["tache" => $tache]);
+        loadView("tache/detail", ["tache" => $tache]);
     }
 
     public function terminer() {
