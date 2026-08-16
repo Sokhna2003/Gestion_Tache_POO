@@ -20,13 +20,13 @@
       </a>
       
       <nav class="space-y-2">
-        <div class="flex items-center p-3 rounded-lg hover:bg-white/10 cursor-pointer transition">
+        <div class="flex items-center p-3 rounded-lg transition <?= $_REQUEST["controller"] == "dashboard" ? "bg-white/10 text-[#00A8CC]" : "hover:bg-white/10 text-gray-300" ?>">
           <a href="<?= path("dashboard","dashboard") ?>" class="flex items-center space-x-2 w-full">
             <i class="fa-solid fa-house w-6"></i> <span>Dashboard</span>
           </a>
         </div>
 
-        <div class="flex items-center p-3 rounded-lg hover:bg-white/10 cursor-pointer transition">
+        <div class="flex items-center p-3 rounded-lg transition <?= $_REQUEST["controller"] == "tache" ? "bg-white/10 text-[#00A8CC]" : "hover:bg-white/10 text-gray-300" ?>">
           <a href="<?= path("tache","liste") ?>" class="flex items-center space-x-2 w-full">
             <i class="fa-solid fa-list-check w-6"></i> <span>Mes Tâches</span>
           </a>
